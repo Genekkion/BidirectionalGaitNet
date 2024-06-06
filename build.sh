@@ -7,6 +7,8 @@ if [ -f /etc/redhat-release ]; then
     export CXX=/opt/ohpc/pub/compiler/gcc/8.3.0/bin/g++
 fi
 
+CONDAENV="/home/user/miniconda3"
+
 mkdir -p build
 pushd build
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
@@ -17,10 +19,10 @@ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
       -DCMAKE_INSTALL_RPATH=$ENVDIR \
       -DFCL_INCLUDE_DIRS=$ENVDIR/include/fcl \
       -DSERVER_BUILD=TRUE \
-      -DPYTHON_LIBRARY=/app/miniconda3/lib/libpython3.8.so \
-      -DPYTHON_INCLUDE_DIRS=/app/miniconda3/include/python3.8 \
-      -DPYTHON3_LIBRARY=/app/miniconda3/lib/libpython3.8.so \
-      -DPYTHON3_INCLUDE_DIRS=/app/miniconda3/include/python3.8 \
-      -DPYTHON_DEFAULT_EXECUTABLE=/app/miniconda3/bin/python3 \
+      -DPYTHON_LIBRARY=$CONDAENV/lib/libpython3.8.so \
+      -DPYTHON_INCLUDE_DIRS=$CONDAENV/include/python3.8 \
+      -DPYTHON3_LIBRARY=$CONDAENV/lib/libpython3.8.so \
+      -DPYTHON3_INCLUDE_DIRS=$CONDAENV/include/python3.8 \
+      -DPYTHON_DEFAULT_EXECUTABLE=$CONDAENV/bin/python3 \
       ..
 popd
