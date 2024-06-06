@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ENVDIR=${ENVDIR:-~/pkgenv}
-ENVDIR=${ENVDIR:-/home/user/pkgenv}
+ENVDIR=${ENVDIR:-/app/pkgenv}
 # If CentOS server, set C++ compiler manually
 if [ -f /etc/redhat-release ]; then
     export CC=/opt/ohpc/pub/compiler/gcc/8.3.0/bin/gcc
