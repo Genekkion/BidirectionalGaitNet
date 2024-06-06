@@ -9,7 +9,8 @@ import torch
 from typing import List, Callable, Union, Any, TypeVar, Tuple
 from torch import nn
 from torch.nn import functional as F
-import pickle5 as pickle
+# import pickle5 as pickle
+import pickle
 
 Tensor = TypeVar('torch.tensor')
 

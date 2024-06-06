@@ -3,7 +3,8 @@ from math import fabs
 import torch
 import torch.nn as nn
 import numpy as np
-import pickle5 as pickle
+# import pickle5 as pickle
+import pickle
 
 from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
 from ray.rllib.utils.torch_ops import convert_to_torch_tensor

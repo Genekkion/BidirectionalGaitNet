@@ -6,7 +6,8 @@ import torch
 import os
 import math
 from forward_gaitnet import RefNN
-import pickle5 as pickle
+# import pickle5 as pickle
+import pickle
 import random
 from torch.utils.tensorboard import SummaryWriter
 from typing import List, Dict

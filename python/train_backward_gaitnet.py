@@ -5,7 +5,8 @@ import torch.optim as optim
 from symbol import parameters
 from forward_gaitnet import RefNN
 import argparse
-import pickle5 as pickle
+# import pickle5 as pickle
+import pickle
 import torch.nn.utils as torch_utils
 from pysim import RayEnvManager
 from ray.rllib.utils.torch_ops import convert_to_torch_tensor
