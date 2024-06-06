@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.5.1)
 project(mysim)
 set(OpenGL_GL_PREFERENCE LEGACY)
 set(CMAKE_CXX_STANDARD 17)
-# set(PYTHON_LIBRARIES "/app/miniconda3/lib")
-# set(PYTHON_INCLUDE_DIRS "/app/miniconda3/include/python3.8")
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release" CACHE STRING
       "Choose the type of build, options are: Debug Release
@@ -23,8 +21,8 @@ add_definitions(-DMASS_ROOT_DIR="..")
 set(CMAKE_MODULE_PATH "${CMAKE_HOME_DIRECTORY}/cmake")
 
 # if(SERVER_BUILD)
-find_package(PythonLibs 3.8 REQUIRED)
-find_package(PythonInterp 3.8 REQUIRED)
+find_package(PythonLibs 3.6 REQUIRED)
+find_package(PythonInterp 3.6 REQUIRED)
 # endif()
 
 
